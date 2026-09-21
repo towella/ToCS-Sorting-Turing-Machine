@@ -1,0 +1,6 @@
+⎆	[	→		<first state here (state to move into first), e.g. compare>
+<first state here (state to move into first), e.g. compare>	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		move_forward_3
+move_forward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		move_forward_2
+move_forward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		move_forward_1
+move_forward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test1
+test1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test2
