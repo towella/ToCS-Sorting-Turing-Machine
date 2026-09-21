@@ -15,64 +15,28 @@ class TuringMachine:
         pass
 
 # -- helper macros --
-    allowedCharsForMove = "0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,"
 
-    # next state is the state to go into after moving is complete
-    def move_forward_n(self, steps: int, next_state: str) -> None:
-        if steps > 0:
+     # next state is the state to go into after moving is complete
+    def move(self, steps: int, next_state: str, remember: str = "") -> None:
+        if steps != 0:
+            allowed_chars_for_move = "0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,"
+            move_char = "→" if steps > 0 else "←"
+            state_direction = "forward" if steps > 0 else "backward"
+            state_tail = f"_remember_{remember}" if remember else ""
+            steps = abs(steps)
+
             # move
-            for n in range(steps-1, 0, -1):  # decrement loop
-                next_move_state = f"move_forward_{n}"
-                self.__write_state(self.current_state, self.allowedCharsForMove, "→", "", next_move_state)
+            for n in range(steps-1, 0, -1):  # decrememnt loop
+                next_move_state = f"move_{state_direction}_{n}{state_tail}"
+                self.__write_state(self.current_state, allowed_chars_for_move, move_char, "", next_move_state)
                 self.current_state = next_move_state
             # final move transitions into next state
-            self.__write_state(self.current_state, self.allowedCharsForMove, "→", "", next_state)
+            self.__write_state(self.current_state, allowed_chars_for_move, move_char, "", next_state)
             self.current_state = next_state
-        else:
-            raise Exception("Steps must be > 0 when moving forward n")
 
-    def move_backward_n(self, steps: int, next_state: str) -> None:
-        if steps > 0:
-            # move
-            for n in range(steps-1, 0, -1):
-                next_move_state = f"move_backward_{n}"
-                self.__write_state(self.current_state, self.allowedCharsForMove, "←", "", next_move_state)
-                self.current_state = next_move_state
-            # final move transitions into next state
-            self.__write_state(self.current_state, self.allowedCharsForMove, "←", "", next_state)
-            self.current_state = next_state
         else:
-            raise Exception("Steps must be > 0 when moving backward n")
-        
-
-    def move_forward_n_remember_x(self, steps: int, remember: str, next_state: str) -> str:
-        if steps > 0:
-            # move
-            for n in range(steps-1, 0, -1):
-                next_move_state = f"move_forward_{n}_remember_{remember}"
-                self.__write_state(self.current_state, self.allowedCharsForMove, "→", "", next_move_state)
-                self.current_state = next_move_state
-            # final move transitionts into next state
-            self.__write_state(self.current_state, self.allowedCharsForMove, "→", "", next_state)
-            self.current_state = next_state
-        else:
-            raise Exception("Steps must be > 0 when moving forward n and remembering x")
-        
-
-    def move_backward_n_remember_x(self, steps: int, remember: str, next_state: str) -> str:
-        if steps > 0:
-            # move
-            for n in range(steps-1, 0, -1):
-                next_move_state = f"move_backward_{n}_remember_{remember}"
-                self.__write_state(self.current_state, self.allowedCharsForMove, "←", "", next_move_state)
-                self.current_state = next_move_state
-            # final move transitionts into next state
-            self.__write_state(self.current_state, self.allowedCharsForMove, "←", "", next_state)
-            self.current_state = next_state
-        else:
-            raise Exception("Steps must be > 0 when moving")
+            raise Exception("0 steps is not allowed when moving. Must be some positive or negative number of steps")
             
-
     # the turing machine writes to the input string tape
     # TODO: workout params
     def write_tape(self):

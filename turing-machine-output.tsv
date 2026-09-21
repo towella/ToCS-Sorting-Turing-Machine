@@ -4,3 +4,11 @@ move_forward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		move_forward_2
 move_forward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		move_forward_1
 move_forward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test1
 test1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test2
+test2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		move_forward_5_remember_0
+move_forward_5_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		move_forward_4_remember_0
+move_forward_4_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		move_forward_3_remember_0
+move_forward_3_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		move_forward_2_remember_0
+move_forward_2_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		move_forward_1_remember_0
+move_forward_1_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test3
+test3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		move_backward_1_remember_bingbong
+move_backward_1_remember_bingbong	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4

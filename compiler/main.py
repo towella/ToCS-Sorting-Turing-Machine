@@ -3,8 +3,10 @@ from turing_machine import TuringMachine
 tm = TuringMachine("<first state here (state to move into first), e.g. compare>")
 
 
-tm.move_forward_n(4, "test1")
-tm.move_backward_n(1, "test2")
+tm.move(4, "test1")
+tm.move(-1, "test2")
+tm.move(6, "test3", "0")
+tm.move(-2, "test4", "bingbong")
 
 
 
