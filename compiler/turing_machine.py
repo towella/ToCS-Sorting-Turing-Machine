@@ -10,6 +10,7 @@ class TuringMachine:
         self.states = []  # list of all the rows in the turing machine
         self.current_state = "⎆"  # keep track of the current TM state (for writing etc)
         self.all_chars = "0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,"
+        self.hex_chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
         self.__write_start_state(first_state)  # start state
 
 # -- high level methods --
@@ -62,22 +63,20 @@ class TuringMachine:
         else:
             raise Exception("0 steps is not allowed when moving. Must be some positive or negative number of steps")
 
-    # output should always be looped over to be handled properly
     # returns all states that should be accounted for (one for each character in format <next_state>_<char>)
+    # current state transitions/diverges into 16 variants of next_state
     # current state must be handled outside method as it could be one of 16 states
     def move_and_remember(self, steps: int, next_state: str) -> list[str]:
         if steps != 0:
             start_state = self.current_state
-            hex_chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
-            out_states = [f"{next_state}_{char}" for char in hex_chars]
+            state_id = self.__get_state_id()
+            move_char = "→" if steps > 0 else "←"
+            state_direction = "forward" if steps > 0 else "backward"
+            steps = abs(steps)
 
             # make duplicate states for each possible char (since we don't know what char we'll get and must account for all)
-            for char in hex_chars:
-                move_char = "→" if steps > 0 else "←"
-                state_id = self.__get_state_id()
-                state_direction = "forward" if steps > 0 else "backward"
+            for char in self.hex_chars:
                 state_tail = f"remember_{char}"
-                steps = abs(steps)
 
                 # single step: move only on given character straight into next state
                 if steps == 1:
@@ -99,20 +98,23 @@ class TuringMachine:
                     self.__write_state(self.current_state, self.all_chars, move_char, "", f"{next_state}_{char}")
 
             self.current_state = next_state  # current state must be updated outside method
-            return out_states
+            return [f"{next_state}_{char}" for char in self.hex_chars]
         
         else:
             raise Exception("0 steps is not allowed when moving and remembering. Must be some positive or negative number of steps")
 
     # the turing machine writes to the input string tape
     # does not move the head unit. Only writes to the tape and changes to next given state
-    def stationary_tape_write(self, write_symbol: str, next_state: str) -> None:
+    # creates variant of current state for every possible writable character (since we don't know what we're writing)
+    # they all transition/converge to the same state (next_state)
+    def stationary_tape_write(self, next_state: str) -> None:
         state_id = self.__get_state_id()
-        temp_state = f"id{state_id}_{self.current_state}_write_{write_symbol}"
-        # write to tape and move (must move)
-        self.__write_state(self.current_state, self.all_chars, "→", write_symbol, temp_state)
-        # undo move from previous step
-        self.__write_state(temp_state, self.all_chars, "←", "", next_state)
+        for char in self.hex_chars:
+            temp_state = f"id{state_id}_{self.current_state}_write_{char}"
+            # write to tape and move (must move)
+            self.__write_state(f"{self.current_state}_{char}, self.all_chars, "→", char, temp_state)
+            # undo move from previous step
+            self.__write_state(temp_state, self.all_chars, "←", "", next_state)
         self.current_state = next_state
 
     # returns to cell 0 and returns accept state
