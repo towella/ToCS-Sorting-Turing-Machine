@@ -14,7 +14,7 @@ class TuringMachine:
 
 # -- high level methods --
     
-    def compare():
+    def compare(self):
         '''
         Start at A0 (word A, index 0):
         For i in (0 to 15)
@@ -31,54 +31,108 @@ class TuringMachine:
                     Move <- 17 - i to Ai
                     Break and swap from this char onwards through the word
         '''
+        # loop_state_id = self.__get_state_id()
+        # for i in range(15):
+        #     loop_state = f"id{loop_state_id}_compare_loop_{i}"
+        #     self.move(17 - (i + 1), loop_state, True)
         pass
 
-    def swap():
+    def swap(self):
         pass
 
 # -- helper macros --
 
      # next state is the state to go into after moving is complete
-    def move(self, steps: int, next_state: str, remember: str = "") -> None:
+    def move(self, steps: int, next_state: str) -> None:
         if steps != 0:
             move_char = "→" if steps > 0 else "←"
             state_direction = "forward" if steps > 0 else "backward"
-            state_tail = f"_remember_{remember}" if remember else ""
+            state_id = self.__get_state_id()
             steps = abs(steps)
 
-            # move
+            # move on any character
             for n in range(steps-1, 0, -1):  # decrememnt loop
-                next_move_state = f"id{self.unique_state_id}_move_{state_direction}_{n}{state_tail}"
+                next_move_state = f"id{state_id}_move_{state_direction}_{n}"
                 self.__write_state(self.current_state, self.all_chars, move_char, "", next_move_state)
                 self.current_state = next_move_state
             # final move transitions into next state
             self.__write_state(self.current_state, self.all_chars, move_char, "", next_state)
             self.current_state = next_state
-            self.unique_state_id += 1
 
         else:
             raise Exception("0 steps is not allowed when moving. Must be some positive or negative number of steps")
-            
+
+    # output should always be looped over to be handled properly
+    # returns all states that should be accounted for (one for each character in format <next_state>_<char>)
+    # current state must be handled outside method as it could be one of 16 states
+    def move_and_remember(self, steps: int, next_state: str) -> list[str]:
+        if steps != 0:
+            start_state = self.current_state
+            hex_chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
+            out_states = [f"{next_state}_{char}" for char in hex_chars]
+
+            # make duplicate states for each possible char (since we don't know what char we'll get and must account for all)
+            for char in hex_chars:
+                move_char = "→" if steps > 0 else "←"
+                state_id = self.__get_state_id()
+                state_direction = "forward" if steps > 0 else "backward"
+                state_tail = f"remember_{char}"
+                steps = abs(steps)
+
+                # single step: move only on given character straight into next state
+                if steps == 1:
+                    self.__write_state(start_state, char, move_char, "", f"{next_state}_{char}")
+
+                # any other number of states
+                else:
+                    for n in range(steps-1, 0, -1):  # decrememnt loop
+                        next_move_state = f"id{state_id}_move_{state_direction}_{n}_{state_tail}"
+
+                        if n == steps-1:  # for the first step
+                            # only accept char we're remembering at start
+                            self.__write_state(start_state, char, move_char, "", next_move_state)
+                        else:
+                            # continue to move on any char now we know what car we're remembering
+                            self.__write_state(self.current_state, self.all_chars, move_char, "", next_move_state)
+                        self.current_state = next_move_state
+                    # final move transitions into next state
+                    self.__write_state(self.current_state, self.all_chars, move_char, "", f"{next_state}_{char}")
+
+            self.current_state = next_state  # current state must be updated outside method
+            return out_states
+        
+        else:
+            raise Exception("0 steps is not allowed when moving and remembering. Must be some positive or negative number of steps")
+
     # the turing machine writes to the input string tape
     # does not move the head unit. Only writes to the tape and changes to next given state
     def stationary_tape_write(self, write_symbol: str, next_state: str) -> None:
-        temp_state = f"id{self.unique_state_id}_{self.current_state}_write_{write_symbol}"
+        state_id = self.__get_state_id()
+        temp_state = f"id{state_id}_{self.current_state}_write_{write_symbol}"
         # write to tape and move (must move)
         self.__write_state(self.current_state, self.all_chars, "→", write_symbol, temp_state)
         # undo move from previous step
         self.__write_state(temp_state, self.all_chars, "←", "", next_state)
         self.current_state = next_state
-        self.unique_state_id += 1
 
     # returns to cell 0 and returns accept state
     def end_as_sort_completed(self) -> None:
+        '''
+        if char == [
+            halt accept
+        else
+            loop -- halt and accept if [
+                move backwards
+        '''
         all_chars_exclude_open_square_bracket = "0 1 2 3 4 5 6 7 8 9 A B C D E F ] ,"
-        # for all chars except [ begin moving back
-        self.__write_state(self.current_state, all_chars_exclude_open_square_bracket, "←", "", "end_and_accept")
-        # move to cell 0 until [ is hit
-        self.__write_state("end_and_accept", all_chars_exclude_open_square_bracket, "←", "", "end_and_accept")
-        # if at cell 0, halt
+        # already cell 0
         self.__write_state(self.current_state, "[", "⏹", "", "✔")
+
+        # loop move backward
+        self.__write_state(self.current_state, all_chars_exclude_open_square_bracket, "←", "", "end_and_accept")
+        self.__write_state("end_and_accept", all_chars_exclude_open_square_bracket, "←", "", "end_and_accept")
+
+        # end loop at cell 0
         self.__write_state("end_and_accept", "[", "⏹", "", "✔")
 
 # -- private methods --
@@ -91,6 +145,10 @@ class TuringMachine:
     def __write_start_state(self, next_state: str) -> None:
         self.__write_state("⎆", "[", "→", "", next_state)
         self.current_state = next_state
+
+    def __get_state_id(self) -> int:
+        self.unique_state_id += 1
+        return self.unique_state_id - 1
 
 # -- out to file --
 

@@ -6,13 +6,57 @@ id0_move_forward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test1
 test1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1_move_forward_1
 id1_move_forward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test1-5
 test1-5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test2
-test2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id3_move_forward_5_remember_0
-id3_move_forward_5_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id3_move_forward_4_remember_0
-id3_move_forward_4_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id3_move_forward_3_remember_0
-id3_move_forward_3_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id3_move_forward_2_remember_0
-id3_move_forward_2_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id3_move_forward_1_remember_0
-id3_move_forward_1_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test3
-test3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id4_move_backward_1_remember_bingbong
-id4_move_backward_1_remember_bingbong	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4
-test4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	b	id5_test4_write_b
-id5_test4_write_b	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
+test2	0	→		test3_0
+test2	1	→		test3_1
+test2	2	→		test3_2
+test2	3	→		test3_3
+test2	4	→		test3_4
+test2	5	→		test3_5
+test2	6	→		test3_6
+test2	7	→		test3_7
+test2	8	→		test3_8
+test2	9	→		test3_9
+test2	A	→		test3_A
+test2	B	→		test3_B
+test2	C	→		test3_C
+test2	D	→		test3_D
+test2	E	→		test3_E
+test2	F	→		test3_F
+test3	0	←		id19_move_backward_1_remember_0
+id19_move_backward_1_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_0
+test3	1	→		id20_move_forward_1_remember_1
+id20_move_forward_1_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_1
+test3	2	→		id21_move_forward_1_remember_2
+id21_move_forward_1_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_2
+test3	3	→		id22_move_forward_1_remember_3
+id22_move_forward_1_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_3
+test3	4	→		id23_move_forward_1_remember_4
+id23_move_forward_1_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_4
+test3	5	→		id24_move_forward_1_remember_5
+id24_move_forward_1_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_5
+test3	6	→		id25_move_forward_1_remember_6
+id25_move_forward_1_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_6
+test3	7	→		id26_move_forward_1_remember_7
+id26_move_forward_1_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_7
+test3	8	→		id27_move_forward_1_remember_8
+id27_move_forward_1_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_8
+test3	9	→		id28_move_forward_1_remember_9
+id28_move_forward_1_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_9
+test3	A	→		id29_move_forward_1_remember_A
+id29_move_forward_1_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_A
+test3	B	→		id30_move_forward_1_remember_B
+id30_move_forward_1_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_B
+test3	C	→		id31_move_forward_1_remember_C
+id31_move_forward_1_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_C
+test3	D	→		id32_move_forward_1_remember_D
+id32_move_forward_1_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_D
+test3	E	→		id33_move_forward_1_remember_E
+id33_move_forward_1_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_E
+test3	F	→		id34_move_forward_1_remember_F
+id34_move_forward_1_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test4_F
+test4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	b	id35_test4_write_b
+id35_test4_write_b	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
+test5	[	⏹		✔
+test5	0 1 2 3 4 5 6 7 8 9 A B C D E F ] ,	←		end_and_accept
+end_and_accept	0 1 2 3 4 5 6 7 8 9 A B C D E F ] ,	←		end_and_accept
+end_and_accept	[	⏹		✔
