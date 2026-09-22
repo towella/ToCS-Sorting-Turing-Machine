@@ -15,6 +15,22 @@ class TuringMachine:
 # -- high level methods --
     
     def compare():
+        '''
+        Start at A0 (word A, index 0):
+        For i in (0 to 15)
+            Remember Ai
+            Move -> 17 - (i + 1)
+                char == ]
+                    end of list (break/loop)
+                char != ]
+                    Move -> 1 to Bi
+                Bi <= Ai
+                    Move <- 17 - (i + 1) to A(i+1)
+                    next i
+                Bi > Ai
+                    Move <- 17 - i to Ai
+                    Break and swap from this char onwards through the word
+        '''
         pass
 
     def swap():
@@ -54,6 +70,16 @@ class TuringMachine:
         self.current_state = next_state
         self.unique_state_id += 1
 
+    # returns to cell 0 and returns accept state
+    def end_as_sort_completed(self) -> None:
+        all_chars_exclude_open_square_bracket = "0 1 2 3 4 5 6 7 8 9 A B C D E F ] ,"
+        # for all chars except [ begin moving back
+        self.__write_state(self.current_state, all_chars_exclude_open_square_bracket, "←", "", "end_and_accept")
+        # move to cell 0 until [ is hit
+        self.__write_state("end_and_accept", all_chars_exclude_open_square_bracket, "←", "", "end_and_accept")
+        # if at cell 0, halt
+        self.__write_state(self.current_state, "[", "⏹", "", "✔")
+        self.__write_state("end_and_accept", "[", "⏹", "", "✔")
 
 # -- private methods --
 
@@ -61,6 +87,7 @@ class TuringMachine:
     def __write_state(self, current_state: str, current_symbol: str, move: str, next_symbol: str, next_state: str) -> None:
         self.states.append([current_state, current_symbol, move, next_symbol, next_state])
 
+    # moves to first digit of first hex number in list
     def __write_start_state(self, next_state: str) -> None:
         self.__write_state("⎆", "[", "→", "", next_state)
         self.current_state = next_state
