@@ -23,25 +23,71 @@ class TuringMachine:
             Move -> 17 - (i + 1)
                 char == ]
                     end of list (break/loop)
-                char != ]
-                    Move -> 1 to Bi
-                Bi <= Ai
-                    Move <- 17 - (i + 1) to A(i+1)
-                    next i
-                Bi > Ai
+                char == ,
+                    Move -> to Bi
+                Ai > Bi
                     Move <- 17 - i to Ai
                     Break and swap from this char onwards through the word
+                Ai == Bi
+                    Move <- 17 - (i + 1) to A(i+1)
+                    next i
+                Ai < Bi
+                    Move <- to B0
+                    Next comparison
+                    
         '''
-        # loop_state_id = self.__get_state_id()
-        # for i in range(15):
-        #     loop_state = f"id{loop_state_id}_compare_loop_{i}"
-        #     self.move(17 - (i + 1), loop_state, True)
-        pass
+
+        # For i in (0 to 15)
+        loop_state_id = self.__get_state_id()
+        for i in range(16):
+            loop_state = f"id{loop_state_id}_compare_loop_{i}"
+
+            # Remember A1 Move -> 17 - (i + 1)
+            state_variants = self.move_and_remember(17 - (i + 1), loop_state)
+            for state in state_variants:
+
+                # char == ]
+                # move back to An from ]
+                # MARK: TODO: break/loop??????
+                self.__write_state(state, "]", "←", "", "<BREAK/LOOP> ------------------- TODO ----------------------")
+
+                # char == , move -> to Bi
+                self.current_state = f"{state}_checked_separator"
+                self.__write_state(state, ",", "→", "", self.current_state)
+                # move -> to Bi
+                self.move(i + 1, f"{state}_compare_symbols")
+
+                remembered_char = state[-1]  # char final char of state by our established convention
+
+                # Ai > Bi
+                # don't want blank accepted chars (none less than 0)
+                if remembered_char != "0":
+                    self.current_state = f"{state}_swap_required"
+                    self.__write_state(f"{state}_compare_symbols", self.get_less_than_hex_char(remembered_char), "←", "", self.current_state)
+                    # move <- to Ai (already moved back one in prev step so 16 not 17)
+                    self.move(-16, "swap")
+
+                # Ai < Bi
+                # don't want blank accepted chars (none greater than F)
+                if remembered_char != "F":
+                    self.current_state = f"{state}_no_swap_required"
+                    self.__write_state(f"{state}_compare_symbols", self.get_greater_than_hex_char(remembered_char), "→", "", self.current_state)
+                    # move <- B0 for next comparison
+                    self.move(-i - 1, "compare")
+
+                # Ai == Bi
+                self.current_state = f"{state}_compare_next_char_pair"
+                self.__write_state(f"{state}_compare_symbols", remembered_char, "←", "", self.current_state)
+                # move <- to A(i+1)
+                self.move(-15, f"{loop_state}_complete")
+
+            self.current_state = f"{loop_state}_complete"
+
 
     def swap(self):
         pass
 
-# -- helper macros --
+# -- macros --
 
      # next state is the state to go into after moving is complete
     def move(self, steps: int, next_state: str) -> None:
@@ -112,7 +158,7 @@ class TuringMachine:
         for char in self.hex_chars:
             temp_state = f"id{state_id}_{self.current_state}_write_{char}"
             # write to tape and move (must move)
-            self.__write_state(f"{self.current_state}_{char}, self.all_chars, "→", char, temp_state)
+            self.__write_state(f"{self.current_state}_{char}", self.all_chars, "→", char, temp_state)
             # undo move from previous step
             self.__write_state(temp_state, self.all_chars, "←", "", next_state)
         self.current_state = next_state
@@ -136,6 +182,17 @@ class TuringMachine:
 
         # end loop at cell 0
         self.__write_state("end_and_accept", "[", "⏹", "", "✔")
+
+# -- helper methods --
+
+    # returns space separated string of hex characters greater than give char
+    def get_greater_than_hex_char(self, char: str) -> str:
+        i = self.hex_chars.index(char)
+        return " ".join(self.hex_chars[i+1:])
+
+    def get_less_than_hex_char(self, char: str) -> str:
+        i = self.hex_chars.index(char)
+        return " ".join(self.hex_chars[:i])
 
 # -- private methods --
 
