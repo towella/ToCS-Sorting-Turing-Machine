@@ -13,76 +13,75 @@ class TuringMachine:
         self.hex_chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
         self.__write_start_state(first_state)  # start state
 
+    def sort(self):
+        pass
+
 # -- high level methods --
     
+    # compares a pair of characters between two hex numbers A and B and forwards on to another pair comparison,
+    # either between (A and B) or (B and C), or otherwise breaks to continue bubble sorting
     def compare(self):
         '''
-        Start at A0 (word A, index 0):
-        For i in (0 to 15)
-            Remember Ai
-            Move -> 17 - (i + 1)
-                char == ]
-                    end of list (break/loop)
-                char == ,
-                    Move -> to Bi
-                Ai > Bi
-                    Move <- 17 - i to Ai
-                    Break and swap from this char onwards through the word
-                Ai == Bi
-                    Move <- 17 - (i + 1) to A(i+1)
-                    next i
-                Ai < Bi
+        Start comparing from given position
+        For all possible values of An
+            Move -> 17 to Bn
+                for each step check if on ]
+                    char == ]
+                        break and return to start of list to bubble again
+                    char != ]
+                        continue moving
+                An > Bn
+                    Move <- 17 - i to An
+                    Swap from this char onwards through the word
+                An == Bn
+                    Move <- 17 - (n + 1) to A(n+1)
+                    Next comparison (recursive call)
+                An < Bn
                     Move <- to B0
-                    Next comparison        
+                    Next comparison (recursive call)  
         '''
 
-        self.current_state = "compare"
-        loop_state_id = self.__get_state_id()
+        # consider any possible character
+        for char in self.hex_chars:
+            self.current_state = "compare"
+            state_id = self.__get_state_id()
 
-        # For i in (0 to 15)
-        for i in range(16):
-            loop_state = f"id{loop_state_id}_compare_loop_{i}"
+            # move 17 from An to Bn remembering An for comparison
+            # check every step whether we're at the end of the list (in which case we do something else)
+            for i in range(16, 0, -1):
+                new_state = f"id{state_id}_move_forward_{i}_remember_{char}"
+                self.__write_state(self.current_state, "0 1 2 3 4 5 6 7 8 9 A B C D E F ,", "→", "", new_state)
+                self.__write_state(self.current_state, "]", "←", "", "<BREAK/LOOP> ------------------- TODO ----------------------")
+                self.current_state = new_state
 
-            # Remember A1 Move -> 17 - (i + 1)
-            state_variants = self.move_and_remember(17 - (i + 1), loop_state)
-            for state in state_variants:
+            remembered_char = self.current_state[-1]  # char final char of state by our established convention
+            remembered_char_state = self.current_state  # cache current state for following branching decisions
 
-                # char == ]
-                # move back to An from ]
-                # MARK: TODO: break/loop??????
-                self.__write_state(state, "]", "←", "", "<BREAK/LOOP> ------------------- TODO ----------------------")
+            # - compare -
+            # An > Bn
+            # don't want blank accepted chars (none less than 0)
+            if remembered_char != "0":
+                new_state = f"id{state_id}_swap_required"
+                self.__write_state(remembered_char_state, self.get_less_than_hex_char(remembered_char), "←", "", new_state)
+                self.current_state = new_state
+                # move <- to Ai (already moved back one in prev step so 16 not 17)
+                self.move(-16, "swap")
 
-                # char == , move -> to Bi
-                self.current_state = f"{state}_checked_separator"
-                self.__write_state(state, ",", "→", "", self.current_state)
-                # move -> to Bi
-                self.move(i + 1, f"{state}_compare_symbols")
+            # An < Bn
+            # don't want blank accepted chars (none greater than F)
+            if remembered_char != "F":
+                new_state = f"id{state_id}_no_swap_required"
+                self.__write_state(remembered_char_state, self.get_greater_than_hex_char(remembered_char), "→", "", new_state)
+                self.current_state = new_state
+                # move <- B0 for next comparison
+                self.move(-i - 1, "compare")
 
-                remembered_char = state[-1]  # char final char of state by our established convention
-
-                # Ai > Bi
-                # don't want blank accepted chars (none less than 0)
-                if remembered_char != "0":
-                    self.current_state = f"{state}_swap_required"
-                    self.__write_state(f"{state}_compare_symbols", self.get_less_than_hex_char(remembered_char), "←", "", self.current_state)
-                    # move <- to Ai (already moved back one in prev step so 16 not 17)
-                    self.move(-16, "swap")
-
-                # Ai < Bi
-                # don't want blank accepted chars (none greater than F)
-                if remembered_char != "F":
-                    self.current_state = f"{state}_no_swap_required"
-                    self.__write_state(f"{state}_compare_symbols", self.get_greater_than_hex_char(remembered_char), "→", "", self.current_state)
-                    # move <- B0 for next comparison
-                    self.move(-i - 1, "compare")
-
-                # Ai == Bi
-                self.current_state = f"{state}_compare_next_char_pair"
-                self.__write_state(f"{state}_compare_symbols", remembered_char, "←", "", self.current_state)
-                # move <- to A(i+1)
-                self.move(-15, f"{loop_state}_complete")
-
-            self.current_state = f"{loop_state}_complete"
+            # Ai == Bi
+            new_state = f"id{state_id}_compare_next_char_pair"
+            self.__write_state(remembered_char_state, remembered_char, "←", "", new_state)
+            self.current_state = new_state
+            # move <- to A(i+1)
+            self.move(-15, "compare")
 
     # swaps a pair of characters between two hex numbers A and B and forwards on to another pair swap or 
     # on to the next comparison of hex nums B and C
@@ -104,7 +103,6 @@ class TuringMachine:
         '''
 
         self.current_state = "swap"
-        loop_state_id = self.__get_state_id()
 
         # remember Ai, Move -> 17 to Bi
         loop_state = f"swap_loop"
