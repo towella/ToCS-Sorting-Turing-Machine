@@ -33,12 +33,13 @@ class TuringMachine:
                     next i
                 Ai < Bi
                     Move <- to B0
-                    Next comparison
-                    
+                    Next comparison        
         '''
 
-        # For i in (0 to 15)
+        self.current_state = "compare"
         loop_state_id = self.__get_state_id()
+
+        # For i in (0 to 15)
         for i in range(16):
             loop_state = f"id{loop_state_id}_compare_loop_{i}"
 
@@ -83,9 +84,54 @@ class TuringMachine:
 
             self.current_state = f"{loop_state}_complete"
 
-
+    # swaps a pair of characters between two hex numbers A and B and forwards on to another pair swap or 
+    # on to the next comparison of hex nums B and C
     def swap(self):
-        pass
+        '''
+        Assume current char is first swap
+        Loop until , or ]
+            Remember Ai
+            Move -> 17 to Bi
+            Remember Bi and write Ai
+            Move <- 17 to Ai
+            Write Bi
+            Move -> 1 to Ai+1
+            Ai+1 == , (will never be ] since we know there is a B number)
+                Move -> 1 to B0
+                Begin next comparison of B and C (recursion base case)
+            Ai+1 != ,
+                Begin next swap recursively
+        '''
+
+        self.current_state = "swap"
+        loop_state_id = self.__get_state_id()
+
+        # remember Ai, Move -> 17 to Bi
+        loop_state = f"swap_loop"
+        A_variant_states = self.move_and_remember(17, f"{loop_state}_remember_A_and_overwrite_B")
+
+        # Remember Bi and write Ai
+        # account for all possible Bi chars to remember
+        for char in self.hex_chars:
+            for A_state in A_variant_states:
+                remembered_A_char = A_state[-1]
+                self.current_state = f"{loop_state}_overwrote_B_remember_B_{char}"
+                self.__write_state(A_state, char, "→", remembered_A_char, self.current_state)
+
+            # move <- 17 to Ai (and compensate for write move hence 18)
+            self.move(-18, f"{loop_state}_overwrite_A_with_B_{char}")
+
+            # overwrite Ai as Bi and move -> 1 to Ai+1
+            self.__write_state(f"{loop_state}_overwrite_A_with_B_{char}", " ".join(self.hex_chars), "→", char, f"{loop_state}_check_for_separator")
+
+        # Ai+1 == ,  Move -> 1 to B0, begin next comparison
+        self.__write_state(f"{loop_state}_check_for_separator", ",", "→", "", "compare")
+        # Ai+1 != ,  Begin next char pair swap from here
+        self.__write_state(f"{loop_state}_check_for_separator", " ".join(self.hex_chars), "→", "", f"{loop_state}_setup_next_swap")
+            # undo previous move forward when checking no comma
+        self.__write_state(f"{loop_state}_setup_next_swap", self.all_chars, "←", "", "swap")
+
+            
 
 # -- macros --
 
@@ -148,20 +194,6 @@ class TuringMachine:
         
         else:
             raise Exception("0 steps is not allowed when moving and remembering. Must be some positive or negative number of steps")
-
-    # the turing machine writes to the input string tape
-    # does not move the head unit. Only writes to the tape and changes to next given state
-    # creates variant of current state for every possible writable character (since we don't know what we're writing)
-    # they all transition/converge to the same state (next_state)
-    def stationary_tape_write(self, next_state: str) -> None:
-        state_id = self.__get_state_id()
-        for char in self.hex_chars:
-            temp_state = f"id{state_id}_{self.current_state}_write_{char}"
-            # write to tape and move (must move)
-            self.__write_state(f"{self.current_state}_{char}", self.all_chars, "→", char, temp_state)
-            # undo move from previous step
-            self.__write_state(temp_state, self.all_chars, "←", "", next_state)
-        self.current_state = next_state
 
     # returns to cell 0 and returns accept state
     def end_as_sort_completed(self) -> None:

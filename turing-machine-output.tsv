@@ -15319,110 +15319,838 @@ id1008_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1008_move_ba
 id1008_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1008_move_backward_2
 id1008_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1008_move_backward_1
 id1008_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id0_compare_loop_15_complete
-id0_compare_loop_15_complete	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1009_move_forward_3
-id1009_move_forward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1009_move_forward_2
-id1009_move_forward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1009_move_forward_1
-id1009_move_forward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test1
-test1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1
-id1010_move_forward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		test1-5
-test1-5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test2
-test2	0	→		test3_0
-test2	1	→		test3_1
-test2	2	→		test3_2
-test2	3	→		test3_3
-test2	4	→		test3_4
-test2	5	→		test3_5
-test2	6	→		test3_6
-test2	7	→		test3_7
-test2	8	→		test3_8
-test2	9	→		test3_9
-test2	A	→		test3_A
-test2	B	→		test3_B
-test2	C	→		test3_C
-test2	D	→		test3_D
-test2	E	→		test3_E
-test2	F	→		test3_F
-test3	0	←		id1013_move_backward_2_remember_0
-id1013_move_backward_2_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_0
-id1013_move_backward_1_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_0
-test3	1	←		id1013_move_backward_2_remember_1
-id1013_move_backward_2_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_1
-id1013_move_backward_1_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_1
-test3	2	←		id1013_move_backward_2_remember_2
-id1013_move_backward_2_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_2
-id1013_move_backward_1_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_2
-test3	3	←		id1013_move_backward_2_remember_3
-id1013_move_backward_2_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_3
-id1013_move_backward_1_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_3
-test3	4	←		id1013_move_backward_2_remember_4
-id1013_move_backward_2_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_4
-id1013_move_backward_1_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_4
-test3	5	←		id1013_move_backward_2_remember_5
-id1013_move_backward_2_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_5
-id1013_move_backward_1_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_5
-test3	6	←		id1013_move_backward_2_remember_6
-id1013_move_backward_2_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_6
-id1013_move_backward_1_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_6
-test3	7	←		id1013_move_backward_2_remember_7
-id1013_move_backward_2_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_7
-id1013_move_backward_1_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_7
-test3	8	←		id1013_move_backward_2_remember_8
-id1013_move_backward_2_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_8
-id1013_move_backward_1_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_8
-test3	9	←		id1013_move_backward_2_remember_9
-id1013_move_backward_2_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_9
-id1013_move_backward_1_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_9
-test3	A	←		id1013_move_backward_2_remember_A
-id1013_move_backward_2_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_A
-id1013_move_backward_1_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_A
-test3	B	←		id1013_move_backward_2_remember_B
-id1013_move_backward_2_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_B
-id1013_move_backward_1_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_B
-test3	C	←		id1013_move_backward_2_remember_C
-id1013_move_backward_2_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_C
-id1013_move_backward_1_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_C
-test3	D	←		id1013_move_backward_2_remember_D
-id1013_move_backward_2_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_D
-id1013_move_backward_1_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_D
-test3	E	←		id1013_move_backward_2_remember_E
-id1013_move_backward_2_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_E
-id1013_move_backward_1_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_E
-test3	F	←		id1013_move_backward_2_remember_F
-id1013_move_backward_2_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1_remember_F
-id1013_move_backward_1_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test4_F
-test4_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	0	id1014_test4_write_0
-id1014_test4_write_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	1	id1014_test4_write_1
-id1014_test4_write_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	2	id1014_test4_write_2
-id1014_test4_write_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	3	id1014_test4_write_3
-id1014_test4_write_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	4	id1014_test4_write_4
-id1014_test4_write_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	5	id1014_test4_write_5
-id1014_test4_write_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	6	id1014_test4_write_6
-id1014_test4_write_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	7	id1014_test4_write_7
-id1014_test4_write_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	8	id1014_test4_write_8
-id1014_test4_write_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	9	id1014_test4_write_9
-id1014_test4_write_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	A	id1014_test4_write_A
-id1014_test4_write_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	B	id1014_test4_write_B
-id1014_test4_write_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	C	id1014_test4_write_C
-id1014_test4_write_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	D	id1014_test4_write_D
-id1014_test4_write_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	E	id1014_test4_write_E
-id1014_test4_write_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test4_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→	F	id1014_test4_write_F
-id1014_test4_write_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		test5
-test5	[	⏹		✔
-test5	0 1 2 3 4 5 6 7 8 9 A B C D E F ] ,	←		end_and_accept
-end_and_accept	0 1 2 3 4 5 6 7 8 9 A B C D E F ] ,	←		end_and_accept
-end_and_accept	[	⏹		✔
+swap	0	→		id1010_move_forward_16_remember_0
+id1010_move_forward_16_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_0
+id1010_move_forward_15_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_0
+id1010_move_forward_14_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_0
+id1010_move_forward_13_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_0
+id1010_move_forward_12_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_0
+id1010_move_forward_11_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_0
+id1010_move_forward_10_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_0
+id1010_move_forward_9_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_0
+id1010_move_forward_8_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_0
+id1010_move_forward_7_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_0
+id1010_move_forward_6_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_0
+id1010_move_forward_5_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_0
+id1010_move_forward_4_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_0
+id1010_move_forward_3_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_0
+id1010_move_forward_2_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_0
+id1010_move_forward_1_remember_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_0
+swap	1	→		id1010_move_forward_16_remember_1
+id1010_move_forward_16_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_1
+id1010_move_forward_15_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_1
+id1010_move_forward_14_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_1
+id1010_move_forward_13_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_1
+id1010_move_forward_12_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_1
+id1010_move_forward_11_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_1
+id1010_move_forward_10_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_1
+id1010_move_forward_9_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_1
+id1010_move_forward_8_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_1
+id1010_move_forward_7_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_1
+id1010_move_forward_6_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_1
+id1010_move_forward_5_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_1
+id1010_move_forward_4_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_1
+id1010_move_forward_3_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_1
+id1010_move_forward_2_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_1
+id1010_move_forward_1_remember_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_1
+swap	2	→		id1010_move_forward_16_remember_2
+id1010_move_forward_16_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_2
+id1010_move_forward_15_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_2
+id1010_move_forward_14_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_2
+id1010_move_forward_13_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_2
+id1010_move_forward_12_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_2
+id1010_move_forward_11_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_2
+id1010_move_forward_10_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_2
+id1010_move_forward_9_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_2
+id1010_move_forward_8_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_2
+id1010_move_forward_7_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_2
+id1010_move_forward_6_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_2
+id1010_move_forward_5_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_2
+id1010_move_forward_4_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_2
+id1010_move_forward_3_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_2
+id1010_move_forward_2_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_2
+id1010_move_forward_1_remember_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_2
+swap	3	→		id1010_move_forward_16_remember_3
+id1010_move_forward_16_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_3
+id1010_move_forward_15_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_3
+id1010_move_forward_14_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_3
+id1010_move_forward_13_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_3
+id1010_move_forward_12_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_3
+id1010_move_forward_11_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_3
+id1010_move_forward_10_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_3
+id1010_move_forward_9_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_3
+id1010_move_forward_8_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_3
+id1010_move_forward_7_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_3
+id1010_move_forward_6_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_3
+id1010_move_forward_5_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_3
+id1010_move_forward_4_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_3
+id1010_move_forward_3_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_3
+id1010_move_forward_2_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_3
+id1010_move_forward_1_remember_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_3
+swap	4	→		id1010_move_forward_16_remember_4
+id1010_move_forward_16_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_4
+id1010_move_forward_15_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_4
+id1010_move_forward_14_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_4
+id1010_move_forward_13_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_4
+id1010_move_forward_12_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_4
+id1010_move_forward_11_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_4
+id1010_move_forward_10_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_4
+id1010_move_forward_9_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_4
+id1010_move_forward_8_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_4
+id1010_move_forward_7_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_4
+id1010_move_forward_6_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_4
+id1010_move_forward_5_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_4
+id1010_move_forward_4_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_4
+id1010_move_forward_3_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_4
+id1010_move_forward_2_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_4
+id1010_move_forward_1_remember_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_4
+swap	5	→		id1010_move_forward_16_remember_5
+id1010_move_forward_16_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_5
+id1010_move_forward_15_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_5
+id1010_move_forward_14_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_5
+id1010_move_forward_13_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_5
+id1010_move_forward_12_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_5
+id1010_move_forward_11_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_5
+id1010_move_forward_10_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_5
+id1010_move_forward_9_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_5
+id1010_move_forward_8_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_5
+id1010_move_forward_7_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_5
+id1010_move_forward_6_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_5
+id1010_move_forward_5_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_5
+id1010_move_forward_4_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_5
+id1010_move_forward_3_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_5
+id1010_move_forward_2_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_5
+id1010_move_forward_1_remember_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_5
+swap	6	→		id1010_move_forward_16_remember_6
+id1010_move_forward_16_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_6
+id1010_move_forward_15_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_6
+id1010_move_forward_14_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_6
+id1010_move_forward_13_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_6
+id1010_move_forward_12_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_6
+id1010_move_forward_11_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_6
+id1010_move_forward_10_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_6
+id1010_move_forward_9_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_6
+id1010_move_forward_8_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_6
+id1010_move_forward_7_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_6
+id1010_move_forward_6_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_6
+id1010_move_forward_5_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_6
+id1010_move_forward_4_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_6
+id1010_move_forward_3_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_6
+id1010_move_forward_2_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_6
+id1010_move_forward_1_remember_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_6
+swap	7	→		id1010_move_forward_16_remember_7
+id1010_move_forward_16_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_7
+id1010_move_forward_15_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_7
+id1010_move_forward_14_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_7
+id1010_move_forward_13_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_7
+id1010_move_forward_12_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_7
+id1010_move_forward_11_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_7
+id1010_move_forward_10_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_7
+id1010_move_forward_9_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_7
+id1010_move_forward_8_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_7
+id1010_move_forward_7_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_7
+id1010_move_forward_6_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_7
+id1010_move_forward_5_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_7
+id1010_move_forward_4_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_7
+id1010_move_forward_3_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_7
+id1010_move_forward_2_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_7
+id1010_move_forward_1_remember_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_7
+swap	8	→		id1010_move_forward_16_remember_8
+id1010_move_forward_16_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_8
+id1010_move_forward_15_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_8
+id1010_move_forward_14_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_8
+id1010_move_forward_13_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_8
+id1010_move_forward_12_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_8
+id1010_move_forward_11_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_8
+id1010_move_forward_10_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_8
+id1010_move_forward_9_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_8
+id1010_move_forward_8_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_8
+id1010_move_forward_7_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_8
+id1010_move_forward_6_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_8
+id1010_move_forward_5_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_8
+id1010_move_forward_4_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_8
+id1010_move_forward_3_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_8
+id1010_move_forward_2_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_8
+id1010_move_forward_1_remember_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_8
+swap	9	→		id1010_move_forward_16_remember_9
+id1010_move_forward_16_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_9
+id1010_move_forward_15_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_9
+id1010_move_forward_14_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_9
+id1010_move_forward_13_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_9
+id1010_move_forward_12_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_9
+id1010_move_forward_11_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_9
+id1010_move_forward_10_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_9
+id1010_move_forward_9_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_9
+id1010_move_forward_8_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_9
+id1010_move_forward_7_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_9
+id1010_move_forward_6_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_9
+id1010_move_forward_5_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_9
+id1010_move_forward_4_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_9
+id1010_move_forward_3_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_9
+id1010_move_forward_2_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_9
+id1010_move_forward_1_remember_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_9
+swap	A	→		id1010_move_forward_16_remember_A
+id1010_move_forward_16_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_A
+id1010_move_forward_15_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_A
+id1010_move_forward_14_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_A
+id1010_move_forward_13_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_A
+id1010_move_forward_12_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_A
+id1010_move_forward_11_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_A
+id1010_move_forward_10_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_A
+id1010_move_forward_9_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_A
+id1010_move_forward_8_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_A
+id1010_move_forward_7_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_A
+id1010_move_forward_6_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_A
+id1010_move_forward_5_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_A
+id1010_move_forward_4_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_A
+id1010_move_forward_3_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_A
+id1010_move_forward_2_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_A
+id1010_move_forward_1_remember_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_A
+swap	B	→		id1010_move_forward_16_remember_B
+id1010_move_forward_16_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_B
+id1010_move_forward_15_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_B
+id1010_move_forward_14_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_B
+id1010_move_forward_13_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_B
+id1010_move_forward_12_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_B
+id1010_move_forward_11_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_B
+id1010_move_forward_10_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_B
+id1010_move_forward_9_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_B
+id1010_move_forward_8_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_B
+id1010_move_forward_7_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_B
+id1010_move_forward_6_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_B
+id1010_move_forward_5_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_B
+id1010_move_forward_4_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_B
+id1010_move_forward_3_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_B
+id1010_move_forward_2_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_B
+id1010_move_forward_1_remember_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_B
+swap	C	→		id1010_move_forward_16_remember_C
+id1010_move_forward_16_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_C
+id1010_move_forward_15_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_C
+id1010_move_forward_14_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_C
+id1010_move_forward_13_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_C
+id1010_move_forward_12_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_C
+id1010_move_forward_11_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_C
+id1010_move_forward_10_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_C
+id1010_move_forward_9_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_C
+id1010_move_forward_8_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_C
+id1010_move_forward_7_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_C
+id1010_move_forward_6_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_C
+id1010_move_forward_5_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_C
+id1010_move_forward_4_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_C
+id1010_move_forward_3_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_C
+id1010_move_forward_2_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_C
+id1010_move_forward_1_remember_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_C
+swap	D	→		id1010_move_forward_16_remember_D
+id1010_move_forward_16_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_D
+id1010_move_forward_15_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_D
+id1010_move_forward_14_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_D
+id1010_move_forward_13_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_D
+id1010_move_forward_12_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_D
+id1010_move_forward_11_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_D
+id1010_move_forward_10_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_D
+id1010_move_forward_9_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_D
+id1010_move_forward_8_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_D
+id1010_move_forward_7_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_D
+id1010_move_forward_6_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_D
+id1010_move_forward_5_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_D
+id1010_move_forward_4_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_D
+id1010_move_forward_3_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_D
+id1010_move_forward_2_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_D
+id1010_move_forward_1_remember_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_D
+swap	E	→		id1010_move_forward_16_remember_E
+id1010_move_forward_16_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_E
+id1010_move_forward_15_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_E
+id1010_move_forward_14_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_E
+id1010_move_forward_13_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_E
+id1010_move_forward_12_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_E
+id1010_move_forward_11_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_E
+id1010_move_forward_10_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_E
+id1010_move_forward_9_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_E
+id1010_move_forward_8_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_E
+id1010_move_forward_7_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_E
+id1010_move_forward_6_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_E
+id1010_move_forward_5_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_E
+id1010_move_forward_4_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_E
+id1010_move_forward_3_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_E
+id1010_move_forward_2_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_E
+id1010_move_forward_1_remember_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_E
+swap	F	→		id1010_move_forward_16_remember_F
+id1010_move_forward_16_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_15_remember_F
+id1010_move_forward_15_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_14_remember_F
+id1010_move_forward_14_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_13_remember_F
+id1010_move_forward_13_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_12_remember_F
+id1010_move_forward_12_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_11_remember_F
+id1010_move_forward_11_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_10_remember_F
+id1010_move_forward_10_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_9_remember_F
+id1010_move_forward_9_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_8_remember_F
+id1010_move_forward_8_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_7_remember_F
+id1010_move_forward_7_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_6_remember_F
+id1010_move_forward_6_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_5_remember_F
+id1010_move_forward_5_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_4_remember_F
+id1010_move_forward_4_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_3_remember_F
+id1010_move_forward_3_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_2_remember_F
+id1010_move_forward_2_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		id1010_move_forward_1_remember_F
+id1010_move_forward_1_remember_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	→		swap_loop_remember_A_and_overwrite_B_F
+swap_loop_remember_A_and_overwrite_B_0	0	→	0	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_1	0	→	1	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_2	0	→	2	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_3	0	→	3	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_4	0	→	4	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_5	0	→	5	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_6	0	→	6	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_7	0	→	7	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_8	0	→	8	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_9	0	→	9	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_A	0	→	A	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_B	0	→	B	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_C	0	→	C	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_D	0	→	D	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_E	0	→	E	swap_loop_overwrote_B_remember_B_0
+swap_loop_remember_A_and_overwrite_B_F	0	→	F	swap_loop_overwrote_B_remember_B_0
+swap_loop_overwrote_B_remember_B_0	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_17
+id1011_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_16
+id1011_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_15
+id1011_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_14
+id1011_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_13
+id1011_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_12
+id1011_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_11
+id1011_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_10
+id1011_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_9
+id1011_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_8
+id1011_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_7
+id1011_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_6
+id1011_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_5
+id1011_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_4
+id1011_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_3
+id1011_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_2
+id1011_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1011_move_backward_1
+id1011_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_0
+swap_loop_overwrite_A_with_B_0	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	0	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	1	→	0	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_1	1	→	1	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_2	1	→	2	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_3	1	→	3	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_4	1	→	4	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_5	1	→	5	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_6	1	→	6	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_7	1	→	7	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_8	1	→	8	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_9	1	→	9	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_A	1	→	A	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_B	1	→	B	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_C	1	→	C	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_D	1	→	D	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_E	1	→	E	swap_loop_overwrote_B_remember_B_1
+swap_loop_remember_A_and_overwrite_B_F	1	→	F	swap_loop_overwrote_B_remember_B_1
+swap_loop_overwrote_B_remember_B_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_17
+id1012_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_16
+id1012_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_15
+id1012_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_14
+id1012_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_13
+id1012_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_12
+id1012_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_11
+id1012_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_10
+id1012_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_9
+id1012_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_8
+id1012_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_7
+id1012_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_6
+id1012_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_5
+id1012_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_4
+id1012_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_3
+id1012_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_2
+id1012_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1012_move_backward_1
+id1012_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_1
+swap_loop_overwrite_A_with_B_1	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	1	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	2	→	0	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_1	2	→	1	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_2	2	→	2	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_3	2	→	3	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_4	2	→	4	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_5	2	→	5	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_6	2	→	6	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_7	2	→	7	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_8	2	→	8	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_9	2	→	9	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_A	2	→	A	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_B	2	→	B	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_C	2	→	C	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_D	2	→	D	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_E	2	→	E	swap_loop_overwrote_B_remember_B_2
+swap_loop_remember_A_and_overwrite_B_F	2	→	F	swap_loop_overwrote_B_remember_B_2
+swap_loop_overwrote_B_remember_B_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_17
+id1013_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_16
+id1013_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_15
+id1013_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_14
+id1013_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_13
+id1013_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_12
+id1013_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_11
+id1013_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_10
+id1013_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_9
+id1013_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_8
+id1013_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_7
+id1013_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_6
+id1013_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_5
+id1013_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_4
+id1013_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_3
+id1013_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_2
+id1013_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1013_move_backward_1
+id1013_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_2
+swap_loop_overwrite_A_with_B_2	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	2	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	3	→	0	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_1	3	→	1	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_2	3	→	2	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_3	3	→	3	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_4	3	→	4	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_5	3	→	5	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_6	3	→	6	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_7	3	→	7	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_8	3	→	8	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_9	3	→	9	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_A	3	→	A	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_B	3	→	B	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_C	3	→	C	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_D	3	→	D	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_E	3	→	E	swap_loop_overwrote_B_remember_B_3
+swap_loop_remember_A_and_overwrite_B_F	3	→	F	swap_loop_overwrote_B_remember_B_3
+swap_loop_overwrote_B_remember_B_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_17
+id1014_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_16
+id1014_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_15
+id1014_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_14
+id1014_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_13
+id1014_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_12
+id1014_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_11
+id1014_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_10
+id1014_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_9
+id1014_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_8
+id1014_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_7
+id1014_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_6
+id1014_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_5
+id1014_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_4
+id1014_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_3
+id1014_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_2
+id1014_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1014_move_backward_1
+id1014_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_3
+swap_loop_overwrite_A_with_B_3	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	3	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	4	→	0	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_1	4	→	1	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_2	4	→	2	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_3	4	→	3	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_4	4	→	4	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_5	4	→	5	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_6	4	→	6	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_7	4	→	7	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_8	4	→	8	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_9	4	→	9	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_A	4	→	A	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_B	4	→	B	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_C	4	→	C	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_D	4	→	D	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_E	4	→	E	swap_loop_overwrote_B_remember_B_4
+swap_loop_remember_A_and_overwrite_B_F	4	→	F	swap_loop_overwrote_B_remember_B_4
+swap_loop_overwrote_B_remember_B_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_17
+id1015_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_16
+id1015_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_15
+id1015_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_14
+id1015_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_13
+id1015_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_12
+id1015_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_11
+id1015_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_10
+id1015_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_9
+id1015_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_8
+id1015_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_7
+id1015_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_6
+id1015_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_5
+id1015_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_4
+id1015_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_3
+id1015_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_2
+id1015_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1015_move_backward_1
+id1015_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_4
+swap_loop_overwrite_A_with_B_4	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	4	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	5	→	0	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_1	5	→	1	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_2	5	→	2	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_3	5	→	3	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_4	5	→	4	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_5	5	→	5	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_6	5	→	6	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_7	5	→	7	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_8	5	→	8	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_9	5	→	9	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_A	5	→	A	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_B	5	→	B	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_C	5	→	C	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_D	5	→	D	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_E	5	→	E	swap_loop_overwrote_B_remember_B_5
+swap_loop_remember_A_and_overwrite_B_F	5	→	F	swap_loop_overwrote_B_remember_B_5
+swap_loop_overwrote_B_remember_B_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_17
+id1016_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_16
+id1016_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_15
+id1016_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_14
+id1016_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_13
+id1016_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_12
+id1016_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_11
+id1016_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_10
+id1016_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_9
+id1016_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_8
+id1016_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_7
+id1016_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_6
+id1016_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_5
+id1016_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_4
+id1016_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_3
+id1016_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_2
+id1016_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1016_move_backward_1
+id1016_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_5
+swap_loop_overwrite_A_with_B_5	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	5	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	6	→	0	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_1	6	→	1	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_2	6	→	2	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_3	6	→	3	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_4	6	→	4	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_5	6	→	5	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_6	6	→	6	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_7	6	→	7	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_8	6	→	8	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_9	6	→	9	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_A	6	→	A	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_B	6	→	B	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_C	6	→	C	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_D	6	→	D	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_E	6	→	E	swap_loop_overwrote_B_remember_B_6
+swap_loop_remember_A_and_overwrite_B_F	6	→	F	swap_loop_overwrote_B_remember_B_6
+swap_loop_overwrote_B_remember_B_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_17
+id1017_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_16
+id1017_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_15
+id1017_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_14
+id1017_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_13
+id1017_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_12
+id1017_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_11
+id1017_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_10
+id1017_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_9
+id1017_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_8
+id1017_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_7
+id1017_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_6
+id1017_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_5
+id1017_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_4
+id1017_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_3
+id1017_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_2
+id1017_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1017_move_backward_1
+id1017_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_6
+swap_loop_overwrite_A_with_B_6	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	6	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	7	→	0	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_1	7	→	1	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_2	7	→	2	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_3	7	→	3	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_4	7	→	4	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_5	7	→	5	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_6	7	→	6	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_7	7	→	7	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_8	7	→	8	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_9	7	→	9	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_A	7	→	A	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_B	7	→	B	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_C	7	→	C	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_D	7	→	D	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_E	7	→	E	swap_loop_overwrote_B_remember_B_7
+swap_loop_remember_A_and_overwrite_B_F	7	→	F	swap_loop_overwrote_B_remember_B_7
+swap_loop_overwrote_B_remember_B_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_17
+id1018_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_16
+id1018_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_15
+id1018_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_14
+id1018_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_13
+id1018_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_12
+id1018_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_11
+id1018_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_10
+id1018_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_9
+id1018_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_8
+id1018_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_7
+id1018_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_6
+id1018_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_5
+id1018_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_4
+id1018_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_3
+id1018_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_2
+id1018_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1018_move_backward_1
+id1018_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_7
+swap_loop_overwrite_A_with_B_7	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	7	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	8	→	0	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_1	8	→	1	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_2	8	→	2	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_3	8	→	3	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_4	8	→	4	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_5	8	→	5	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_6	8	→	6	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_7	8	→	7	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_8	8	→	8	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_9	8	→	9	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_A	8	→	A	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_B	8	→	B	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_C	8	→	C	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_D	8	→	D	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_E	8	→	E	swap_loop_overwrote_B_remember_B_8
+swap_loop_remember_A_and_overwrite_B_F	8	→	F	swap_loop_overwrote_B_remember_B_8
+swap_loop_overwrote_B_remember_B_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_17
+id1019_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_16
+id1019_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_15
+id1019_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_14
+id1019_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_13
+id1019_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_12
+id1019_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_11
+id1019_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_10
+id1019_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_9
+id1019_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_8
+id1019_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_7
+id1019_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_6
+id1019_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_5
+id1019_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_4
+id1019_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_3
+id1019_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_2
+id1019_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1019_move_backward_1
+id1019_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_8
+swap_loop_overwrite_A_with_B_8	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	8	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	9	→	0	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_1	9	→	1	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_2	9	→	2	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_3	9	→	3	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_4	9	→	4	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_5	9	→	5	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_6	9	→	6	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_7	9	→	7	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_8	9	→	8	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_9	9	→	9	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_A	9	→	A	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_B	9	→	B	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_C	9	→	C	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_D	9	→	D	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_E	9	→	E	swap_loop_overwrote_B_remember_B_9
+swap_loop_remember_A_and_overwrite_B_F	9	→	F	swap_loop_overwrote_B_remember_B_9
+swap_loop_overwrote_B_remember_B_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_17
+id1020_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_16
+id1020_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_15
+id1020_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_14
+id1020_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_13
+id1020_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_12
+id1020_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_11
+id1020_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_10
+id1020_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_9
+id1020_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_8
+id1020_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_7
+id1020_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_6
+id1020_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_5
+id1020_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_4
+id1020_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_3
+id1020_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_2
+id1020_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1020_move_backward_1
+id1020_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_9
+swap_loop_overwrite_A_with_B_9	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	9	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	A	→	0	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_1	A	→	1	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_2	A	→	2	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_3	A	→	3	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_4	A	→	4	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_5	A	→	5	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_6	A	→	6	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_7	A	→	7	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_8	A	→	8	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_9	A	→	9	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_A	A	→	A	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_B	A	→	B	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_C	A	→	C	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_D	A	→	D	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_E	A	→	E	swap_loop_overwrote_B_remember_B_A
+swap_loop_remember_A_and_overwrite_B_F	A	→	F	swap_loop_overwrote_B_remember_B_A
+swap_loop_overwrote_B_remember_B_A	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_17
+id1021_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_16
+id1021_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_15
+id1021_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_14
+id1021_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_13
+id1021_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_12
+id1021_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_11
+id1021_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_10
+id1021_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_9
+id1021_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_8
+id1021_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_7
+id1021_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_6
+id1021_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_5
+id1021_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_4
+id1021_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_3
+id1021_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_2
+id1021_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1021_move_backward_1
+id1021_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_A
+swap_loop_overwrite_A_with_B_A	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	A	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	B	→	0	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_1	B	→	1	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_2	B	→	2	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_3	B	→	3	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_4	B	→	4	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_5	B	→	5	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_6	B	→	6	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_7	B	→	7	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_8	B	→	8	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_9	B	→	9	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_A	B	→	A	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_B	B	→	B	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_C	B	→	C	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_D	B	→	D	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_E	B	→	E	swap_loop_overwrote_B_remember_B_B
+swap_loop_remember_A_and_overwrite_B_F	B	→	F	swap_loop_overwrote_B_remember_B_B
+swap_loop_overwrote_B_remember_B_B	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_17
+id1022_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_16
+id1022_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_15
+id1022_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_14
+id1022_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_13
+id1022_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_12
+id1022_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_11
+id1022_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_10
+id1022_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_9
+id1022_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_8
+id1022_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_7
+id1022_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_6
+id1022_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_5
+id1022_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_4
+id1022_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_3
+id1022_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_2
+id1022_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1022_move_backward_1
+id1022_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_B
+swap_loop_overwrite_A_with_B_B	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	B	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	C	→	0	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_1	C	→	1	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_2	C	→	2	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_3	C	→	3	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_4	C	→	4	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_5	C	→	5	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_6	C	→	6	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_7	C	→	7	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_8	C	→	8	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_9	C	→	9	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_A	C	→	A	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_B	C	→	B	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_C	C	→	C	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_D	C	→	D	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_E	C	→	E	swap_loop_overwrote_B_remember_B_C
+swap_loop_remember_A_and_overwrite_B_F	C	→	F	swap_loop_overwrote_B_remember_B_C
+swap_loop_overwrote_B_remember_B_C	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_17
+id1023_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_16
+id1023_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_15
+id1023_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_14
+id1023_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_13
+id1023_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_12
+id1023_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_11
+id1023_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_10
+id1023_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_9
+id1023_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_8
+id1023_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_7
+id1023_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_6
+id1023_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_5
+id1023_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_4
+id1023_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_3
+id1023_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_2
+id1023_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1023_move_backward_1
+id1023_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_C
+swap_loop_overwrite_A_with_B_C	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	C	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	D	→	0	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_1	D	→	1	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_2	D	→	2	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_3	D	→	3	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_4	D	→	4	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_5	D	→	5	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_6	D	→	6	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_7	D	→	7	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_8	D	→	8	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_9	D	→	9	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_A	D	→	A	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_B	D	→	B	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_C	D	→	C	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_D	D	→	D	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_E	D	→	E	swap_loop_overwrote_B_remember_B_D
+swap_loop_remember_A_and_overwrite_B_F	D	→	F	swap_loop_overwrote_B_remember_B_D
+swap_loop_overwrote_B_remember_B_D	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_17
+id1024_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_16
+id1024_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_15
+id1024_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_14
+id1024_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_13
+id1024_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_12
+id1024_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_11
+id1024_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_10
+id1024_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_9
+id1024_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_8
+id1024_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_7
+id1024_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_6
+id1024_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_5
+id1024_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_4
+id1024_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_3
+id1024_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_2
+id1024_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1024_move_backward_1
+id1024_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_D
+swap_loop_overwrite_A_with_B_D	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	D	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	E	→	0	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_1	E	→	1	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_2	E	→	2	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_3	E	→	3	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_4	E	→	4	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_5	E	→	5	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_6	E	→	6	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_7	E	→	7	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_8	E	→	8	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_9	E	→	9	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_A	E	→	A	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_B	E	→	B	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_C	E	→	C	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_D	E	→	D	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_E	E	→	E	swap_loop_overwrote_B_remember_B_E
+swap_loop_remember_A_and_overwrite_B_F	E	→	F	swap_loop_overwrote_B_remember_B_E
+swap_loop_overwrote_B_remember_B_E	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_17
+id1025_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_16
+id1025_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_15
+id1025_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_14
+id1025_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_13
+id1025_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_12
+id1025_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_11
+id1025_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_10
+id1025_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_9
+id1025_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_8
+id1025_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_7
+id1025_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_6
+id1025_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_5
+id1025_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_4
+id1025_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_3
+id1025_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_2
+id1025_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1025_move_backward_1
+id1025_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_E
+swap_loop_overwrite_A_with_B_E	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	E	swap_loop_check_for_separator
+swap_loop_remember_A_and_overwrite_B_0	F	→	0	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_1	F	→	1	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_2	F	→	2	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_3	F	→	3	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_4	F	→	4	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_5	F	→	5	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_6	F	→	6	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_7	F	→	7	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_8	F	→	8	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_9	F	→	9	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_A	F	→	A	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_B	F	→	B	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_C	F	→	C	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_D	F	→	D	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_E	F	→	E	swap_loop_overwrote_B_remember_B_F
+swap_loop_remember_A_and_overwrite_B_F	F	→	F	swap_loop_overwrote_B_remember_B_F
+swap_loop_overwrote_B_remember_B_F	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_17
+id1026_move_backward_17	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_16
+id1026_move_backward_16	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_15
+id1026_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_14
+id1026_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_13
+id1026_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_12
+id1026_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_11
+id1026_move_backward_11	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_10
+id1026_move_backward_10	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_9
+id1026_move_backward_9	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_8
+id1026_move_backward_8	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_7
+id1026_move_backward_7	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_6
+id1026_move_backward_6	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_5
+id1026_move_backward_5	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_4
+id1026_move_backward_4	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_3
+id1026_move_backward_3	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_2
+id1026_move_backward_2	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		id1026_move_backward_1
+id1026_move_backward_1	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap_loop_overwrite_A_with_B_F
+swap_loop_overwrite_A_with_B_F	0 1 2 3 4 5 6 7 8 9 A B C D E F	→	F	swap_loop_check_for_separator
+swap_loop_check_for_separator	,	→		compare
+swap_loop_check_for_separator	0 1 2 3 4 5 6 7 8 9 A B C D E F	→		swap_loop_setup_next_swap
+swap_loop_setup_next_swap	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,	←		swap
