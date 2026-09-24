@@ -20,6 +20,14 @@ class TuringMachine:
     def compare(self):
         '''
         Start comparing from given position
+
+        Handle startting with , (we've just finished finding both hex numbers are the same and returned to An+1 being a ,)
+            Move -> 17
+            char == ] or |
+                Advance sorted boundary
+            char != ] or |
+                continue moving
+
         For all possible values of An
             Move -> 17 to Bn
                 for each step check if on ] (end of list) or | (unsorted-sorted separator)
@@ -38,6 +46,20 @@ class TuringMachine:
                     Next comparison (recursive call)  
         '''
 
+        # edge case where we start on end of list (possible if list is empty)
+        self.__write_state("compare", "] |", "←", "", "advance_sorted_boundary")
+
+        # if we start on a "," we have found both hex numbers to be identical
+        # handle , to move forward to check if next divider is ] or , or |
+        # if ] or |, advance boundary
+        # otherwise begin next comparison
+        self.__write_state("compare", ",", "→", "", "check_next_separator")
+        self.__write_state("check_next_separator", " ".join(self.hex_chars), "→", "", "check_next_separator")
+        self.__write_state("check_next_separator", "] |", "←", "", "advance_sorted_boundary")
+        self.current_state = "begin_next_comparison"
+        self.__write_state("check_next_separator", ",", "←", "", self.current_state)
+        self.move(-16, "compare")
+
         # consider any possible character
         for char in self.hex_chars:
             self.current_state = "compare"
@@ -45,13 +67,16 @@ class TuringMachine:
 
             # move 17 from An to Bn remembering An for comparison
             # check every step whether we're at the end of the list/unsorted list
-            for i in range(16, 0, -1):
+            for i in range(17, 0, -1):
 
                 # move and remember
                 new_state = f"id{state_id}_move_forward_{i}_remember_{char}"
-                self.__write_state(self.current_state, "0 1 2 3 4 5 6 7 8 9 A B C D E F ,", "→", "", new_state)
-                # check end of list/unsorted list
-                self.__write_state(self.current_state, "] |", "←", "", "advance_sorted_boundary")
+                if self.current_state == "compare":
+                    self.__write_state(self.current_state, char, "→", "", new_state)
+                else:
+                    self.__write_state(self.current_state, "0 1 2 3 4 5 6 7 8 9 A B C D E F ,", "→", "", new_state)
+                    # check end of list/unsorted list
+                    self.__write_state(self.current_state, "] |", "←", "", "advance_sorted_boundary")
                 self.current_state = new_state
 
             remembered_char = self.current_state[-1]  # char final char of state by our established convention
@@ -146,6 +171,9 @@ class TuringMachine:
         self.__write_state("advance_sorted_boundary", " ".join(self.hex_chars) + " | ]", "←", "", "find_last_separator")
         self.__write_state("find_last_separator", " ".join(self.hex_chars),  "←", "", "find_last_separator")
 
+        # if we're already on [ we know that the list is actually empty and we should halt immediately
+        self.__write_state("advance_sorted_boundary", "[", "→", "", "sort_completed_reset_list_and_end")
+
         # char == ,
         self.__write_state("find_last_separator", ",", "←", "|", "restart_bubble")
         self.__write_state("restart_bubble", " ".join(self.hex_chars) + " ,", "←", "", "restart_bubble")
@@ -169,6 +197,10 @@ class TuringMachine:
         '''
         exclude_open_square_bracket = "0 1 2 3 4 5 6 7 8 9 A B C D E F ]"
         exclude_close_square_bracket = "0 1 2 3 4 5 6 7 8 9 A B C D E F [ |"
+
+        # in case list is actually empty
+        self.__write_state("sort_completed_reset_list_and_end", "]", "←", "", "list_empty_halt")
+        self.__write_state("list_empty_halt", "[", "⏹", "", "✔")
 
         # move to end
         self.__write_state("sort_completed_reset_list_and_end", exclude_close_square_bracket, "→", "", "move_to_end")
@@ -262,7 +294,9 @@ class TuringMachine:
 
     # moves to first digit of first hex number in list
     def __write_start_state(self, next_state: str) -> None:
+        # two start states as the spec and the simulator use different start states
         self.__write_state("⎆", "[", "→", "", next_state)
+        self.__write_state("▶", "[", "→", "", next_state)
         self.current_state = next_state
 
     def __get_state_id(self) -> int:
