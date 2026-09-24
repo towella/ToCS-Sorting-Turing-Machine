@@ -9,12 +9,9 @@ class TuringMachine:
         self.unique_state_id = 0
         self.states = []  # list of all the rows in the turing machine
         self.current_state = "⎆"  # keep track of the current TM state (for writing etc)
-        self.all_chars = "0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] ,"
+        self.all_chars = "0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] , |"
         self.hex_chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
         self.__write_start_state(first_state)  # start state
-
-    def sort(self):
-        pass
 
 # -- high level methods --
     
@@ -25,10 +22,10 @@ class TuringMachine:
         Start comparing from given position
         For all possible values of An
             Move -> 17 to Bn
-                for each step check if on ]
-                    char == ]
-                        break and return to start of list to bubble again
-                    char != ]
+                for each step check if on ] (end of list) or | (unsorted-sorted separator)
+                    char == ] or |
+                        Advance sorted boundary
+                    char != ] or |
                         continue moving
                 An > Bn
                     Move <- 17 - i to An
@@ -47,11 +44,14 @@ class TuringMachine:
             state_id = self.__get_state_id()
 
             # move 17 from An to Bn remembering An for comparison
-            # check every step whether we're at the end of the list (in which case we do something else)
+            # check every step whether we're at the end of the list/unsorted list
             for i in range(16, 0, -1):
+
+                # move and remember
                 new_state = f"id{state_id}_move_forward_{i}_remember_{char}"
                 self.__write_state(self.current_state, "0 1 2 3 4 5 6 7 8 9 A B C D E F ,", "→", "", new_state)
-                self.__write_state(self.current_state, "]", "←", "", "<BREAK/LOOP> ------------------- TODO ----------------------")
+                # check end of list/unsorted list
+                self.__write_state(self.current_state, "] |", "←", "", "advance_sorted_boundary")
                 self.current_state = new_state
 
             remembered_char = self.current_state[-1]  # char final char of state by our established convention
@@ -129,6 +129,56 @@ class TuringMachine:
             # undo previous move forward when checking no comma
         self.__write_state(f"{loop_state}_setup_next_swap", self.all_chars, "←", "", "swap")
 
+# move backwards, replaces last , with | then moves to A0
+    def advance_sorted_boundary(self):
+        '''
+        Find last , or [ on left
+            char == ,
+                write as | (new sorted boundary)
+                return to start of list [
+                move -> 1 so on new A0
+                compare to begin bubble again
+            char == [
+                We've finished sorting!!
+        '''
+
+        # find last , or [ on left
+        self.__write_state("advance_sorted_boundary", " ".join(self.hex_chars) + " | ]", "←", "", "find_last_separator")
+        self.__write_state("find_last_separator", " ".join(self.hex_chars),  "←", "", "find_last_separator")
+
+        # char == ,
+        self.__write_state("find_last_separator", ",", "←", "|", "restart_bubble")
+        self.__write_state("restart_bubble", " ".join(self.hex_chars) + " ,", "←", "", "restart_bubble")
+        self.__write_state("restart_bubble", "[", "→", "", "compare")
+
+        # char == [
+        self.__write_state("find_last_separator", "[", "→", "", "sort_completed_reset_list_and_end")
+
+# moves to list end, moves back to cell 0 rewriting all | as , and returns accept state
+    def sort_completed_reset_list_and_end(self) -> None:
+        '''
+        Move to end of list ]
+        Loop back
+            char == |
+                replace with ,
+            char == [
+                we're at cell 0 and have erased all |
+                halt accept
+            char == anything else
+                keep looping back
+        '''
+        exclude_open_square_bracket = "0 1 2 3 4 5 6 7 8 9 A B C D E F ]"
+        exclude_close_square_bracket = "0 1 2 3 4 5 6 7 8 9 A B C D E F [ |"
+
+        # move to end
+        self.__write_state("sort_completed_reset_list_and_end", exclude_close_square_bracket, "→", "", "move_to_end")
+        self.__write_state("move_to_end", exclude_close_square_bracket, "→", "", "move_to_end")
+        self.__write_state("move_to_end", "]", "←", "", "erase_boundaries")
+
+        # write | boundaries back to ,
+        self.__write_state("erase_boundaries", exclude_open_square_bracket, "←", "", "erase_boundaries")
+        self.__write_state("erase_boundaries", "|", "←", ",", "erase_boundaries")
+        self.__write_state("erase_boundaries", "[", "⏹", "", "✔")
             
 
 # -- macros --
@@ -191,27 +241,7 @@ class TuringMachine:
             return [f"{next_state}_{char}" for char in self.hex_chars]
         
         else:
-            raise Exception("0 steps is not allowed when moving and remembering. Must be some positive or negative number of steps")
-
-    # returns to cell 0 and returns accept state
-    def end_as_sort_completed(self) -> None:
-        '''
-        if char == [
-            halt accept
-        else
-            loop -- halt and accept if [
-                move backwards
-        '''
-        all_chars_exclude_open_square_bracket = "0 1 2 3 4 5 6 7 8 9 A B C D E F ] ,"
-        # already cell 0
-        self.__write_state(self.current_state, "[", "⏹", "", "✔")
-
-        # loop move backward
-        self.__write_state(self.current_state, all_chars_exclude_open_square_bracket, "←", "", "end_and_accept")
-        self.__write_state("end_and_accept", all_chars_exclude_open_square_bracket, "←", "", "end_and_accept")
-
-        # end loop at cell 0
-        self.__write_state("end_and_accept", "[", "⏹", "", "✔")
+            raise Exception("0 steps is not allowed when moving and remembering. Must be some positive or negative number of steps")  
 
 # -- helper methods --
 
