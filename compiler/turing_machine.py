@@ -92,21 +92,24 @@ class TuringMachine:
                 # move <- to Ai (already moved back one in prev step so 16 not 17)
                 self.move(-16, "swap")
 
-            # An < Bn
-            # don't want blank accepted chars (none greater than F)
-            if remembered_char != "F":
-                new_state = f"id{state_id}_no_swap_required"
-                self.__write_state(remembered_char_state, self.get_greater_than_hex_char(remembered_char), "→", "", new_state)
-                self.current_state = new_state
-                # move <- B0 for next comparison
-                self.move(-i - 1, "compare")
-
             # Ai == Bi
             new_state = f"id{state_id}_compare_next_char_pair"
             self.__write_state(remembered_char_state, remembered_char, "←", "", new_state)
             self.current_state = new_state
             # move <- to A(i+1)
             self.move(-15, "compare")
+
+            # An < Bn
+            # don't want blank accepted chars (none greater than F)
+            if remembered_char != "F":
+                new_state = f"id{state_id}_no_swap_required"
+                self.__write_state(remembered_char_state, self.get_greater_than_hex_char(remembered_char), "→", "", new_state)
+                self.current_state = new_state
+
+                self.__write_state(self.current_state, self.all_chars, "←", "", "find_,_for_next_comparison")
+                # move <- B0 for next comparison (deindented because identical for all cases)
+        self.__write_state("find_,_for_next_comparison", " ".join(self.hex_chars), "←", "", "find_,_for_next_comparison")
+        self.__write_state("find_,_for_next_comparison", ",", "→", "", "compare")
 
     # swaps a pair of characters between two hex numbers A and B and forwards on to another pair swap or 
     # on to the next comparison of hex nums B and C
