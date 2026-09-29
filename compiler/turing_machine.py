@@ -187,7 +187,7 @@ class TuringMachine:
         # if we're already on [ we know that the list is actually empty and we should halt immediately
         self.__write_state("advance_sorted_boundary", "[", "→", "", "sort_completed_reset_list_and_end")
 
-        # char == ,
+        # char == , in which case we need to reset the number of swaps back to 0 (no swaps) before we start comparing again
         self.__write_state("find_last_separator", ",", "←", "|", "restart_bubble")
         self.__write_state("restart_bubble", " ".join(self.hex_chars) + " ,", "←", "", "restart_bubble")
         self.__write_state("restart_bubble", "[", "→", "", "compare")
