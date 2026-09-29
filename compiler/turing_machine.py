@@ -21,7 +21,7 @@ class TuringMachine:
         '''
         Start comparing from given position
 
-        Handle startting with , (we've just finished finding both hex numbers are the same and returned to An+1 being a ,)
+        Handle starting with , (we've just finished finding both hex numbers are the same and returned to An+1 being a ,)
             Move -> 17
             char == ] or |
                 Advance sorted boundary
