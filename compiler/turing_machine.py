@@ -17,8 +17,13 @@ class TuringMachine:
     
     # compares a pair of characters between two hex numbers A and B and forwards on to another pair comparison,
     # either between (A and B) or (B and C), or otherwise breaks to continue bubble sorting
-    def compare(self):
+    # potentially append a swap or no_swap to the compare state to determine whether we break out of comparing if list is already sorted after a pass ??
+    def compare(self): 
         '''
+        If current state has had no swaps during previous pass, then list is sorted
+        Else, we know that at least one swap occurred during the previous pass and we can call another pass of bubble sort to compare and swap
+
+        In a given pass of bubble sort:
         Start comparing from given position
 
         Handle starting with , (we've just finished finding both hex numbers are the same and returned to An+1 being a ,)
@@ -45,6 +50,10 @@ class TuringMachine:
                     Move <- to B0
                     Next comparison (recursive call)  
         '''
+
+        # before we start comparing again, check if we previously had swaps in the last pass
+        # if yes, we can adavnce the boundary and start comparing again,
+        # but if not, then we can transition into the sort completed/reset state because the list is already sorted yay
 
         # edge case where we start on end of list (possible if list is empty)
         self.__write_state("compare", "] |", "←", "", "advance_sorted_boundary")
@@ -165,6 +174,7 @@ class TuringMachine:
                 write as | (new sorted boundary)
                 return to start of list [
                 move -> 1 so on new A0
+                set compare to a no swaps state as we need to reset this for each new pass 
                 compare to begin bubble again
             char == [
                 We've finished sorting!!
