@@ -58,7 +58,7 @@ class TuringMachine:
         self.__write_state("check_next_separator", "] |", "←", "", "advance_sorted_boundary")
         self.current_state = "begin_next_comparison"
         self.__write_state("check_next_separator", ",", "←", "", self.current_state)
-        self.move(-16, "compare")
+        self.move(-15, "compare")
 
         # consider any possible character
         for char in self.hex_chars:

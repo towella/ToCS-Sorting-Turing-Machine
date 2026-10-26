@@ -5,8 +5,7 @@ compare	,	→		check_next_separator
 check_next_separator	0 1 2 3 4 5 6 7 8 9 A B C D E F	→		check_next_separator
 check_next_separator	] |	←		advance_sorted_boundary
 check_next_separator	,	←		begin_next_comparison
-begin_next_comparison	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] , |	←		id0_move_backward_15
-id0_move_backward_15	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] , |	←		id0_move_backward_14
+begin_next_comparison	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] , |	←		id0_move_backward_14
 id0_move_backward_14	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] , |	←		id0_move_backward_13
 id0_move_backward_13	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] , |	←		id0_move_backward_12
 id0_move_backward_12	0 1 2 3 4 5 6 7 8 9 A B C D E F [ ] , |	←		id0_move_backward_11
